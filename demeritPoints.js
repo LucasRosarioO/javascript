@@ -1,14 +1,16 @@
 
 function checkSpeed(speed) {
-    if (speed > 130) return 'License suspended'
-    if (speed <= 70) return 'Ok'
-    if (speed > 70) {
+    const speedLimit = 70;
+    const kmPerPoint = 5;
+    
+    if (speed < speedLimit + kmPerPoint) return 'Ok'
+    if (speed > speedLimit){
+        const points = Math.floor(((speed - speedLimit)/ kmPerPoint))
+        if (points >= 12) return 'Licens supended'
+        else return points
         
-        for (let i = 70; i = speed; i+=5) {
-            let points =+1
-            return points
-        }
     }
+
 }
 
-console.log(checkSpeed(75));
+console.log(checkSpeed(prompt('Numero')));

@@ -3,7 +3,6 @@ for (let index = 1; index < 100; index++) {
      document.write(fizzBuzz(index).fontcolor(color(index)).bold())
 }
 
-
 function fizzBuzz(input) {
      if (isNaN(input)===true) return NaN
      if ( (input % 3 === 0) && (input % 5 === 0)  ) return 'FizzBuzz '
